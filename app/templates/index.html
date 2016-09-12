@@ -2,9 +2,18 @@
 
 {% block content %}
     
-    <div class="well">
-        content here.
+   <!--  <div class="well"> -->
+   <div>
+        <table class="table table.stripped">
+        {% for group in random_groups.teamed_groups %}
 
+        <tr>
+            <td>{{ group }}
+        </tr>
+
+        {% endfor %}
+
+        </table>
     </div>
 
     <a href=" {{ url_for('index') }}" class="btn btn-primary btn-large btn-block">Generate Team</a>
